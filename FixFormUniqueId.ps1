@@ -1,7 +1,11 @@
 # TEMPORARY: There's currently a bug(?) in the platform that causes the uniqueid on forms 
 # change case, even though same value. Note uniqueid is not always output.  
 # This causes dirty diffs for forms that haven't actually changed. We resolve this here 
-# by searching for any uppercase GUIDs for the uniqueid attribute and lowercasing them. 
+# by searching for any uppercase GUIDs for the uniqueid attribute and lowercasing them.
+
+# NOTES/WARNINGS:
+# 1. The power platform solution is proprietary, this may stop working at any time.
+# 2. Do not report issues with solution import/export to Microsoft if you're using this script
 
 param (
     [Parameter(Mandatory = $true, HelpMessage = "Enter the path to the unpacked solution")]
